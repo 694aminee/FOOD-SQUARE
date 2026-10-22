@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Food Square · Commande en ligne</title>
+<meta name="description" content="Commande tes tacos, smash burgers, sandwichs et menus chez Food Square, 140 rue Nationale à Villefranche-sur-Saône. À emporter ou en livraison.">
+<meta name="theme-color" content="#D3161D">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23D3161D'/%3E%3Ctext x='16' y='22' font-family='Arial Black,Arial' font-weight='900' font-size='14' text-anchor='middle' fill='white'%3EFS%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&family=Permanent+Marker&display=swap">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" id="home"><b>Food <span>Square</span></b><small>une histoire de goût</small></a>
+    <span class="pill" id="openPill"><i></i><span id="openTxt">…</span></span>
+    <button class="tabbtn desk" id="ordersBtn">Mes commandes</button>
+    <button class="tabbtn acct" id="accountBtn" hidden></button>
+  </div>
+</header>
+
+<div class="demo" id="demoBar" hidden>Mode démo : le site n'est pas encore relié à la cuisine (voir le README).</div>
+<main id="shopView">
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1>Tacos, smash &amp; <em>burgers</em><br>à Villefranche</h1>
+        <p>Compose ta commande, choisis tes sauces, on prépare. À emporter au 140 rue Nationale ou livré sur Villefranche et alentours.</p>
+        <div class="facts"><span class="fact">Viande halal</span><span class="fact">Livraison dès 20 €</span><span class="fact">Ouvert jusqu'à 2h le week-end</span></div>
+      </div>
+      <div class="modebox">
+        <h2>Ta commande</h2>
+        <div class="seg" role="group" aria-label="Mode de commande">
+          <button id="m-emporter" data-mode="emporter" aria-pressed="true">À emporter<small>prête en ~15 min</small></button>
+          <button id="m-livraison" data-mode="livraison" aria-pressed="false">Livraison<small>dès 20 € · 30-45 min</small></button>
+        </div>
+        <p class="note" id="modeNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <nav class="cats" aria-label="Catégories"><div class="wrap" id="catNav"></div></nav>
+
+  <div class="wrap main">
+    <div id="menu"></div>
+    <aside class="ticket side" id="sideTicket" aria-label="Panier"></aside>
+  </div>
+
+  <section class="info" id="infos">
+    <div class="wrap">
+      <div>
+        <h3>Horaires</h3>
+        <table class="hours" id="hoursTbl"></table>
+      </div>
+      <div>
+        <h3>Nous trouver</h3>
+        <p>140 rue Nationale<br>69400 Villefranche-sur-Saône</p>
+        <p>Livraison à partir de 20 € sur Villefranche et alentours.</p>
+        <p><a href="https://www.instagram.com/foodsquare69/" target="_blank" rel="noopener" style="color:var(--red);font-weight:600">@foodsquare69</a> sur Instagram, Snapchat et TikTok</p>
+      </div>
+      <div>
+        <h3>Appeler le snack</h3>
+        <p><a class="sel" href="tel:+33482838702" style="color:inherit;text-decoration:none">04 82 83 87 02</a></p>
+        <p><a class="copy" href="tel:+33482838702" style="display:inline-block;color:inherit;text-decoration:none">Appeler</a> <button class="copy" data-copy="04 82 83 87 02">Copier le numéro</button></p>
+        <p style="color:var(--muted)">Toute la viande est halal.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="bnav" id="bnav" aria-label="Navigation">
+  <button data-tab="menu" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span>Carte</span></button>
+  <button data-tab="orders" aria-current="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z"/><path d="M9 8h6M9 12h6"/></svg><span>Commandes</span><i class="dot" id="bnOrdersDot" hidden></i></button>
+  <button data-tab="cart" aria-current="false" class="bcart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.5 12h-11z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span id="bnCartLabel">Panier</span><b class="count" id="bnCartCount" hidden>0</b></button>
+  <button data-tab="infos" aria-current="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 21s-7-6-7-11a7 7 0 0 1 14 0c0 5-7 11-7 11z"/></svg><span>Infos</span></button>
+  <button data-tab="account" aria-current="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 5-6 8-6s6.5 2 8 6"/></svg><span id="bnAccountLabel">Compte</span></button>
+</nav>
+<div id="sheetRoot"></div>
+<div id="toastRoot"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/common.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

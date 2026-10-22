@@ -1,0 +1,14 @@
+<!-- Modèle d'email "Confirm signup" en français.
+     À coller dans Supabase > Authentication > Emails > Confirm signup.
+     Sujet conseillé : Confirme ton compte Food Square -->
+<div style="font-family:Arial,Helvetica,sans-serif;max-width:480px;margin:0 auto;padding:24px;color:#161314">
+  <p style="font-size:26px;font-weight:900;letter-spacing:1px;margin:0 0 4px">FOOD <span style="color:#D3161D">SQUARE</span></p>
+  <p style="color:#6A6365;margin:0 0 24px">une histoire de goût</p>
+  <h2 style="margin:0 0 12px">Bienvenue !</h2>
+  <p>Merci d'avoir créé ton compte. Clique sur le bouton pour vérifier ton adresse email et commander plus vite la prochaine fois.</p>
+  <p style="margin:28px 0">
+    <a href="{{ .ConfirmationURL }}" style="background:#D3161D;color:#ffffff;padding:14px 22px;border-radius:10px;text-decoration:none;font-weight:bold">Vérifier mon adresse</a>
+  </p>
+  <p style="color:#6A6365;font-size:13px">Si tu n'as pas créé de compte chez Food Square, ignore cet email.</p>
+  <p style="color:#6A6365;font-size:13px">Food Square · 140 rue Nationale, 69400 Villefranche-sur-Saône · 04 82 83 87 02</p>
+</div>
