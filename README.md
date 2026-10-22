@@ -43,12 +43,12 @@ La clé « anon » est faite pour être publique. Ne mets jamais la clé **servi
 
 1. Sur GitHub, dans ton dépôt, va dans **Settings → Pages**.
 2. Dans **Branch**, choisis `main` et le dossier `/ (root)`, puis **Save**.
-3. Après 1 à 2 minutes, l'adresse du site s'affiche en haut de la page, par exemple `https://694aminee.github.io/food-square/`.
+3. Après 1 à 2 minutes, l'adresse du site s'affiche en haut de la page, par exemple `https://694aminee.github.io/FOOD-SQUARE/`.
 
 ### 4. Régler les emails de vérification
 
 1. Dans Supabase, va dans **Authentication → URL Configuration** :
-   - **Site URL** : l'adresse de ton site, par exemple `https://694aminee.github.io/food-square/`.
+   - **Site URL** : l'adresse de ton site, par exemple `https://694aminee.github.io/FOOD-SQUARE/`.
    - **Redirect URLs** : ajoute la même adresse, plus la même suivie de `cuisine.html`.
 2. Vérifie dans **Authentication → Sign In / Providers → Email** que **Confirm email** est activé. C'est le réglage par défaut.
 3. Pour avoir l'email en français : **Authentication → Emails → Confirm signup**.
