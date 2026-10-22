@@ -1,5 +1,9 @@
 # Food Square · commande en ligne
 
+## 👉 [Ouvrir l'app Food Square](https://694aminee.github.io/FOOD-SQUARE/)
+
+L'app est en ligne ici : **https://694aminee.github.io/FOOD-SQUARE/**
+
 Site de commande du snack **Food Square**, 140 rue Nationale, 69400 Villefranche-sur-Saône.
 
 - **Clients** (`index.html`) : la carte complète avec personnalisation (tailles, viandes, sauces, suppléments, menus). Le client commande à emporter ou en livraison (dès 20 €), en invité ou avec un compte.
