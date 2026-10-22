@@ -57,7 +57,7 @@ input,textarea,select{font:inherit;color:var(--ink)}
 .hero::after{content:"";position:absolute;inset:auto -10% -40% 35%;height:150%;background:#D3161D;transform:skewX(-18deg);opacity:.95}
 .hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:end;padding-block:28px 26px}
 .hero h1{font-family:var(--f-display);font-weight:400;text-transform:uppercase;font-size:clamp(36px,6vw,64px);line-height:.95;margin:0;text-wrap:balance;letter-spacing:.01em}
-.hero h1 em{font-style:normal;font-family:var(--f-brush);text-transform:none;color:#FF3B42;font-size:.8em}
+.hero h1 em{font-style:normal;font-family:var(--f-brush);text-transform:none;color:#FF3B42;background:#161314;padding:0 .12em;border-radius:4px;font-size:.8em}
 .hero p{margin:10px 0 0;max-width:46ch;opacity:.85}
 .facts{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
 .fact{font-size:13px;font-weight:600;border:1px solid rgba(243,238,238,.4);padding:5px 10px;border-radius:99px}
